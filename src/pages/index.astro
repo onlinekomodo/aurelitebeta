@@ -1,50 +1,110 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="Home" activePage="home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow fade-up fade-up-1">⛏ &nbsp; Minecraft Mining Server</p>
+    <h1 class="fade-up fade-up-2">Aurelite Mining</h1>
+    <p class="hero-sub fade-up fade-up-2">mc.aurelite.xyz</p>
+    <p class="hero-desc fade-up fade-up-3">
+      Dig deep, strike it rich, and rise through the ranks in a community-driven
+      mining experience unlike any other.
+    </p>
+    <div class="hero-actions fade-up fade-up-4">
+      <a class="btn btn-primary" href="https://shop.aurelite.xyz" target="_blank" rel="noopener">
+        Ranks &amp; Donations
+      </a>
+      <a class="btn" href="https://discord.gg/4Gwuqgr8G4" target="_blank" rel="noopener">
+        Join Discord
+      </a>
+      <a class="btn" href="https://www.planetminecraft.com/server/aurelite-mining/vote/" target="_blank" rel="noopener">
+        Vote for Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-value">⛏</span>
+      <span class="stat-label">Mining Focus</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">🏆</span>
+      <span class="stat-label">Competitions</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">💰</span>
+      <span class="stat-label">Player Economy</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">🎉</span>
+      <span class="stat-label">Regular Events</span>
+    </div>
+  </div>
+
+  <!-- Feature Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything You Need</h2>
+        <div class="divider"></div>
+        <p>Explore the pillars that make Aurelite a unique Minecraft experience.</p>
+      </div>
+      <div class="card-grid">
+        <a class="card" href="/community" style="text-decoration:none; color:inherit;">
+          <span class="card-icon">👥</span>
+          <h3>Community</h3>
+          <p>A welcoming player base, active Discord, and staff who care. Find your place in Aurelite.</p>
+        </a>
+        <a class="card" href="/economy" style="text-decoration:none; color:inherit;">
+          <span class="card-icon">💰</span>
+          <h3>Economy</h3>
+          <p>Trade ores, build wealth, and navigate our player-driven marketplace. Fortune favours the bold.</p>
+        </a>
+        <a class="card" href="/competition" style="text-decoration:none; color:inherit;">
+          <span class="card-icon">🏆</span>
+          <h3>Competition</h3>
+          <p>Prove your skill in mining contests, leaderboards, and head-to-head challenges.</p>
+        </a>
+        <a class="card" href="/events" style="text-decoration:none; color:inherit;">
+          <span class="card-icon">🎉</span>
+          <h3>Events</h3>
+          <p>Regular server-wide events, seasonal specials, and surprise drops keep things exciting.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Quick Links</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="link-grid">
+        <a class="link-card" href="https://shop.aurelite.xyz" target="_blank" rel="noopener">
+          <span class="link-card-icon">🛒</span>
+          <span class="link-card-name">Ranks / Donate</span>
+        </a>
+        <a class="link-card" href="https://discord.gg/4Gwuqgr8G4" target="_blank" rel="noopener">
+          <span class="link-card-icon">💬</span>
+          <span class="link-card-name">Discord</span>
+        </a>
+        <a class="link-card" href="https://www.planetminecraft.com/server/aurelite-mining/vote/" target="_blank" rel="noopener">
+          <span class="link-card-icon">🗳️</span>
+          <span class="link-card-name">Vote</span>
+        </a>
+        <a class="link-card" href="https://docs.google.com/forms/d/e/1FAIpQLSfYjLQX0EKSPugYu369txAdM80skI0S3IikOcDV1dqUKwVT4g/viewform" target="_blank" rel="noopener">
+          <span class="link-card-icon">📋</span>
+          <span class="link-card-name">Staff Application</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

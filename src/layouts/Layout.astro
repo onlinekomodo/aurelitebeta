@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  activePage?: string;
+}
+
+const { title, description = 'Aurelite Mining — A Minecraft Mining Server', activePage } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/community', label: 'Community' },
+  { href: '/economy', label: 'Economy' },
+  { href: '/competition', label: 'Competition' },
+  { href: '/events', label: 'Events' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Aurelite Mining</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        ⛏ Aurelite <span>Mining</span>
+      </a>
+      <ul class="nav-links">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class={activePage === link.label.toLowerCase() ? 'active' : ''}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="https://shop.aurelite.xyz" target="_blank" rel="noopener">
+          Shop
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/community">Community</a>
+      <a href="/economy">Economy</a>
+      <a href="/competition">Competition</a>
+      <a href="/events">Events</a>
+      <a href="https://shop.aurelite.xyz" target="_blank" rel="noopener">Shop</a>
+      <a href="https://discord.gg/4Gwuqgr8G4" target="_blank" rel="noopener">Discord</a>
+      <a href="https://www.planetminecraft.com/server/aurelite-mining/vote/" target="_blank" rel="noopener">Vote</a>
+    </div>
+    <p>© {new Date().getFullYear()} Aurelite Mining &nbsp;·&nbsp; <code>mc.aurelite.xyz</code></p>
+  </footer>
+
+</body>
+</html>

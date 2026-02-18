@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Economy" activePage="economy" description="Learn about the Aurelite Mining economy — ore trading, shops, and more.">
+
+  <section class="page-hero">
+    <h1>Economy</h1>
+    <div class="divider"></div>
+    <p>A fully player-driven economy where every ore you mine can be converted into real in-game wealth.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="card-grid" style="margin-bottom: 4rem;">
+        <div class="card fade-up fade-up-1">
+          <span class="card-icon">⛏️</span>
+          <h3>Mine &amp; Earn</h3>
+          <p>Every ore you extract has value. The deeper you dig, the rarer — and more profitable — your finds become.</p>
+        </div>
+        <div class="card fade-up fade-up-2">
+          <span class="card-icon">🏪</span>
+          <h3>Player Shops</h3>
+          <p>Set up your own shop, buy from other players, and build a trading empire within the server marketplace.</p>
+        </div>
+        <div class="card fade-up fade-up-3">
+          <span class="card-icon">📈</span>
+          <h3>Market Prices</h3>
+          <p>Ore values fluctuate based on supply and demand. Savvy miners time their sales to maximise profit.</p>
+        </div>
+        <div class="card fade-up fade-up-4">
+          <span class="card-icon">🛒</span>
+          <h3>Ranks &amp; Perks</h3>
+          <p>Unlock economic perks, bigger backpacks, and exclusive trading abilities by ranking up in-game or via the shop.</p>
+          <br />
+          <a class="btn" href="https://shop.aurelite.xyz" target="_blank" rel="noopener">View Shop</a>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2>Ore Value Tiers</h2>
+        <div class="divider"></div>
+        <p>A rough guide to ore rarity and relative value on the server.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ore</th>
+            <th>Rarity</th>
+            <th>Relative Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coal</td>
+            <td><span class="ore-badge ore-green">Common</span></td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td>Iron</td>
+            <td><span class="ore-badge ore-green">Common</span></td>
+            <td>Low – Medium</td>
+          </tr>
+          <tr>
+            <td>Gold</td>
+            <td><span class="ore-badge ore-blue">Uncommon</span></td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Redstone</td>
+            <td><span class="ore-badge ore-blue">Uncommon</span></td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Lapis</td>
+            <td><span class="ore-badge ore-blue">Uncommon</span></td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Diamond</td>
+            <td><span class="ore-badge ore-red">Rare</span></td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Emerald</td>
+            <td><span class="ore-badge ore-red">Rare</span></td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Netherite Scrap</td>
+            <td><span class="ore-badge ore-gold">Very Rare</span></td>
+            <td>Very High</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+
+</Layout>
