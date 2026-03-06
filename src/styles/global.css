@@ -64,6 +64,7 @@ a {
 
 a:hover {
   color: var(--gold-light);
+  transform: translateY(2px)
 }
 
 /* ─── Nav ─── */
@@ -306,7 +307,7 @@ main {
 
 .card:hover {
   border-color: rgba(212, 168, 67, 0.3);
-  transform: translateY(-3px);
+  transform: translateY(3px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 20px rgba(212, 168, 67, 0.06);
 }
 
@@ -436,7 +437,7 @@ main {
   border-color: rgba(212, 168, 67, 0.4);
   color: var(--gold);
   background: rgba(212, 168, 67, 0.06);
-  transform: translateY(-2px);
+  transform: translateY(2px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
